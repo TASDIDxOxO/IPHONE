@@ -1,0 +1,298 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+html,body{
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: poppins;
+    background-color: #121212;
+
+}
+.phone{
+    z-index: 1;
+    position: relative;
+    width: min(300px);
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: black;
+    border-radius: 50px;
+    border-style: solid;
+    border-color: #666;
+}
+
+.phone::before{
+    z-index: -1;
+    content: '';
+    position: absolute;
+    inset: 8px;
+    background-color: antiquewhite;
+    border-radius: 42px;
+}
+
+.lensmain{
+    position: absolute;
+    z-index: 0;
+    top: 20px;
+    height: 30px;
+    width: 120px;
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+    margin-left: 10px;
+    align-items: center;
+    border-radius: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+}
+
+
+.lensmain::before{
+    content: '';
+    z-index: -1;
+    position: absolute;
+    background-color: #000000;
+    width: 130px;
+    margin:-5px;
+    height: inherit;
+    border-radius: 20px;
+    transition: 0.3s ease-in-out;
+}
+
+.lensmain:hover::before{
+    width: 200px;
+    margin: -40;
+}
+
+.camera1{
+    background: radial-gradient(#3f3978,#0c0e29,#283964);
+    width: 15px;
+    height: 15px;
+    border-radius:50% ;
+}
+
+
+.camera2{
+    background: radial-gradient(#3f3978,#0c0e29,#283964);
+    width: 15px;
+    height: 15px;
+    border-radius:50% ;
+}
+
+.mute{
+    position: absolute;
+    top: 110px;
+    left: -6px;
+    width: 3px;
+    height: 26px;
+    background: radial-gradient(#ccc,#666,#222);
+
+}
+
+.volup{
+    position: absolute;
+    top: 160px;
+    left: -6px;
+    width: 3px;
+    height: 40px;
+    background: radial-gradient(#ccc,#666,#222);
+}
+
+.voldown{
+    position: absolute;
+    top: 210px;
+    left: -6px;
+    width: 3px;
+    height: 40px;
+    background: radial-gradient(#ccc,#666,#222);
+
+}
+
+.power{
+    position: absolute;
+    top: 170px;
+    width: 3px;
+    height: 70px;
+    background: radial-gradient(#ccc,#666,#222);
+    right: -6px;
+
+}
+
+.antena{
+    position: absolute;
+    z-index: 1;
+    top: -27px;
+    height: 27px;
+    width: 15px;
+    right:45px;
+    border: solid;
+    border-color: #666;
+    background: radial-gradient(ellipse at 52% 50%,rgb(255,255,255,1) 0%, rgba(60,60,60,1)25%, rgba(20,20,20,1) 50%,rgba(0,0,0,1) 100%);
+    border-radius: 15px 15px 0px 0px;
+
+}
+
+#hello{
+    position: absolute;
+    font-family: 'Pacifico', cursive;
+    color: #000000;
+    font-size: 50px;
+    animation: hello 30s infinite;
+}
+
+#hola{
+    position: absolute;
+    font-family: 'Pacifico', cursive;
+    color: #000000;
+    font-size: 50px;
+    animation: hola 30s infinite;
+}
+
+#bonjour{
+    position: absolute;
+    font-family: 'Pacifico', cursive;
+    color: #000000;
+    font-size: 50px;
+    animation: bonjour 30s infinite;
+}
+#ciao{
+    position: absolute;
+    font-family: 'Pacifico', cursive;
+    color: #000000;
+    font-size: 50px;
+    animation: ciao 30s infinite;
+}
+
+#hallo{
+    position: absolute;
+    font-family: 'Pacifico', cursive;
+    color: #000000;
+    font-size: 50px;
+    animation: hallo 30s infinite;
+}
+
+@keyframes hello{
+    0%{
+        opacity: 0;
+
+    }
+    10%{
+        opacity: 1;
+    }
+    20%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@keyframes hola{
+    0%{
+        opacity: 0;
+    }
+    20%{
+        opacity: 0;
+    }
+    30%{
+        opacity: 1;
+    }
+    40%{
+        opacity:0 ;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+@keyframes bonjour{
+    0%{
+        opacity: 0;
+    }
+    40%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+
+    60%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+    }
+
+}
+
+@keyframes ciao{
+    0%{
+        opacity: 0;
+    }
+    60%{
+        opacity: 0;
+    }
+    70%{
+        opacity: 1;
+    }
+    80%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+@keyframes hallo{
+    0%{
+        opacity: 0;
+    }
+    80%{
+        opacity: 0;
+    }
+    90%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+header{
+    color: aquamarine;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 80px;
+    position: relative;
+    left: 40vh;
+    bottom:39vh;
+    white-space: nowrap;
+    font-weight: 900;
+
+
+}
+
+article{
+    position: relative;
+    text-align: left;
+    right: 40vh;
+    color: rgb(92, 74, 74);
+    top: 60px;
+    font-size: 20px;
+    font-weight: bolder;
+    text-align:center;
+
+
+}
+
+.clone{
+    position: relative;
+    right: 70px;
+}
